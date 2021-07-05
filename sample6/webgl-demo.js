@@ -72,7 +72,7 @@ function main() {
   // objects we'll be drawing.
   const buffers = initBuffers(gl);
 
-  const texture = loadTexture(gl, 'cubetexture.png');
+  const texture = loadTexture(gl, 'StanfordBunnyTriView.png');
 
   var then = 0;
 
