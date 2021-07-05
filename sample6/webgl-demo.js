@@ -38,12 +38,16 @@ function main() {
   // Fragment shader program
 
   const fsSource = `
+    precision highp float;
     varying highp vec2 vTextureCoord;
 
     uniform sampler2D uSampler;
 
     void main(void) {
-      gl_FragColor = texture2D(uSampler, vTextureCoord);
+      const float tileCount = 3.0;
+      float uvxStart = floor(vTextureCoord.x * tileCount);
+      
+      gl_FragColor = texture2D(uSampler, vec2(uvxStart / tileCount, 0.0) + vTextureCoord * vec2(1.0 / tileCount, 1.0));
     }
   `;
 
