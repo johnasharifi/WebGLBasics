@@ -48,8 +48,6 @@ function main() {
       float uvxStart = floor(vTextureCoord.x * tileCount);
       
       gl_FragColor = texture2D(uSampler, vec2(uvxStart / tileCount, 0.0) + vTextureCoord * vec2(1.0 / tileCount, 1.0));
-
-      gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);
     }
   `;
 
