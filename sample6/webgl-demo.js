@@ -1,3 +1,5 @@
+// yoinked from https://github.com/mdn/webgl-examples
+
 var cubeRotation = 0.0;
 
 main();
